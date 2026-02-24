@@ -1,0 +1,146 @@
+##Lecture 1
+
+#1 :
+
+num1 = int(input("Enter first number: "))
+num2 = int(input("Enter second number: "))
+
+print("Sum:", num1 + num2)
+
+
+#2 :
+
+num1 = int(input("Enter first number: "))
+num2 = int(input("Enter second number: "))
+
+print("Difference:", num1 - num2)
+
+
+#3 :
+
+num1 = int(input("Enter first number: "))
+num2 = int(input("Enter second number: "))
+
+print("Product:", num1 * num2)
+
+
+#4 :
+
+num1 = int(input("Enter first number: "))
+num2 = int(input("Enter second number: "))
+
+print("Quotient:", num1 / num2)
+
+
+
+#5 :
+
+num1 = int(input("Enter first number: "))
+num2 = int(input("Enter second number: "))
+
+print("Sum:", num1 + num2)
+print("Difference:", num1 - num2)
+print("Product:", num1 * num2)
+print("Quotient:", num1 / num2)
+
+
+#6 :
+
+hours = float(input("Enter hours: "))
+print("Minutes:", hours * 60)
+
+#7 :
+
+mins = float(input("Enter minutes: "))
+print("Hours:", mins / 60)
+
+#8 :
+
+dollars = float(input("Enter Dollars: "))
+print("Rupees:", dollars * 48)
+
+#9 :
+
+rupees = float(input("Enter Rupees: "))
+print("Dollars:", rupees / 48)
+
+#10 : 
+
+d = float(input("Enter Dollars: "))
+rs = d * 48
+pound = rs / 70
+print("Pound:", pound)
+
+#11 :
+
+g = float(input("Enter grams: "))
+print("KG:", g / 1000)
+
+#12 :
+
+kg = float(input("Enter KG: "))
+print("Grams:", kg * 1000)
+
+#13 :
+
+bytes_val = float(input("Enter bytes: "))
+kb = bytes_val / 1024
+mb = kb / 1024
+gb = mb / 1024
+print("KB:", kb, "MB:", mb, "GB:", gb)
+
+#14 :
+
+c = float(input("Enter Celsius: "))
+f = (9/5 * c) + 32
+print("Fahrenheit:", f)
+
+#15 :
+
+f2 = float(input("Enter Fahrenheit: "))
+c2 = 5/9 * (f2 - 32)
+print("Celsius:", c2)
+
+#16 :
+
+p = float(input("Enter Principal: "))
+r = float(input("Enter Rate: "))
+n = float(input("Enter Time/Years: "))
+interest = (p * r * n) / 100
+print("Interest:", interest)
+
+#17 :
+
+side = float(input("Enter side: "))
+print("Area:", side**2, "Perimeter:", 4 * side)
+
+#18 : 
+
+l = float(input("Length: "))
+b = float(input("Breadth: "))
+print("Area:", l * b, "Perimeter:", 2 * (l + b))
+
+#19 :
+
+rad = float(input("Radius: "))
+print("Area:", (22/7) * rad * rad)
+
+#20 :
+
+base = float(input("Base: "))
+h = float(input("Height: "))
+print("Area:", (base * h) / 2)
+
+#21 :
+
+gross = float(input("Enter Gross Salary: "))
+allowance = 0.10 * gross
+deduction = 0.03 * gross
+net_salary = gross + allowance - deduction
+print("Net Salary:", net_salary)
+
+#22 :
+
+gross_sales = float(input("Enter Gross Sales: "))
+net_sales = gross_sales - (0.10 * gross_sales)
+print("Net Sales:", net_sales)
