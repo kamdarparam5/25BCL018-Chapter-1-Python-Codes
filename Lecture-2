@@ -1,0 +1,127 @@
+##Lecture 2
+
+#1 :
+
+a = int(input("Enter first number: "))
+b = float(input("Enter second number: "))
+if a > b:
+    print("Largest:", a, "Smallest:", b)
+else:
+    print("Largest:", b, "Smallest:", a)
+
+#2 :
+
+x = float(input("Enter first: "))
+y = float(input("Enter second: "))
+z = float(input("Enter third: "))
+if x>y>z and x>z>y :
+    large = x
+elif y>x>z and y>z>x :
+    large = y
+else:
+    large = z
+if x <= y and x <= z:
+    small = x
+elif y <= x and y <= z:
+    small = y
+else:
+    small = z
+print("Largest:", large, "Smallest:", small)
+
+#3 :
+
+num = int(input("Enter number: "))
+if num % 2 == 0:
+    print("Even")
+else:
+    print("Odd")
+
+#4 :
+
+n = int(input("Enter number: "))
+if n % 10 == 0:
+    print("Divisible by 10")
+else:
+    print("Not divisible by 10")
+
+#5 :
+
+age = int(input("Enter age: "))
+if age < 18:
+    print("Minor")
+else:
+    print("Major")
+
+#6 :
+
+n = int(input("Enter Number"))
+count = 0
+while n > 0:
+    n = n // 10
+    count = count + 1
+print("Digits :", count)
+
+#7 :
+
+y = int(input("Enter Year"))
+if y % 4 == 0:
+    print("Leap Year")
+else:
+    print("Not Leap Year")
+
+#8 :
+
+a = float(input("Enter Angle 1"))
+b = float(input("Enter Angle 2"))
+c = float(input("Enter Angle 3"))
+if a + b + c == 180:
+    print("Valid")
+else:
+    print("Invalid")
+
+#9 :
+
+n = float(input("Enter Number"))
+if n < 0:
+    print("Absolute :", -n)
+else:
+    print("Absolute :", n)
+
+#10 :
+
+L = float(input("Enter L"))
+B = float(input("Enter B"))
+A = L * B
+P = 2 * (L + B)
+if A > P:
+    print("Area is greater")
+else:
+    print("Perimeter is greater")
+
+#11 :
+x1 = float(input("x1"))
+y1 = float(input("y1"))
+x2 = float(input("x2"))
+y2 = float(input("y2"))
+x3 = float(input("x3"))
+y3 = float(input("y3"))
+res = x1*(y2-y3) + x2*(y3-y1) + x3*(y1-y2)
+if res == 0:
+    print("Straight Line")
+else:
+    print("Not Straight Line")
+
+#12 :
+
+x1 = float(input("Center X"))
+y1 = float(input("Center Y"))
+r = float(input("Radius"))
+x2 = float(input("Point X"))
+y2 = float(input("Point Y"))
+D = ((x2-x1)**2 + (y2-y1)**2)**0.5
+if D < r:
+    print("Inside")
+if D == r:
+    print("On circle")
+if D > r:
+    print("Outside")
