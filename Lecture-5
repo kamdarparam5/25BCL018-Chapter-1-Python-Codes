@@ -1,0 +1,155 @@
+
+##Lecture 5
+
+#1 :
+
+import random
+
+odd_list = []
+while len(odd_list) < 5:
+    num = random.randint(1, 50)
+    if num % 2 != 0:
+        odd_list.append(num)
+
+print("Odd List:", odd_list)
+
+even_list = []
+while len(even_list) < 4:
+    num = random.randint(1, 50)
+    if num % 2 == 0:
+        even_list.append(num)
+
+print("Even List:", even_list)
+
+odd_list[2] = even_list
+print("After Replacing 3rd element:", odd_list)
+
+flat_list = []
+for item in odd_list:
+    if type(item) == list:
+        for i in item:
+            flat_list.append(i)
+    else:
+        flat_list.append(item)
+
+print("Flattened List:", flat_list)
+
+flat_list.sort()
+print("Sorted List:", flat_list)
+
+#2 :
+
+import random
+
+nums = []
+for i in range(50):
+    nums.append(random.randint(1, 30))
+
+print("Original List:", nums)
+
+unique = []
+for num in nums:
+    if num not in unique:
+        unique.append(num)
+
+print("List after removing duplicates:", unique)
+
+#3 :
+
+import random
+
+nums = []
+for i in range(20):
+    nums.append(random.randint(1, 20))
+
+print("List:", nums)
+
+x = int(input("Enter number to search: "))
+
+for i in range(len(nums)):
+    if nums[i] == x:
+        print("Found at position:", i)
+
+#4 : 
+
+import random
+
+nums = []
+for i in range(30):
+    nums.append(random.randint(-50, 50))
+
+print("Original List:", nums)
+
+positive = []
+negative = []
+
+for num in nums:
+    if num >= 0:
+        positive.append(num)
+    else:
+        negative.append(num)
+
+print("Positive List:", positive)
+print("Negative List:", negative)
+
+#5 : 
+
+lst = []
+
+for i in range(5):
+    s = input("Enter string: ")
+    lst.append(s)
+
+print("Original List:", lst)
+
+for i in range(len(lst)):
+    lst[i] = lst[i].upper()
+
+print("Uppercase List:", lst)
+
+#6 :
+
+temps = []
+
+for i in range(5):
+    f = float(input("Enter temperature in Fahrenheit: "))
+    temps.append(f)
+
+print("Fahrenheit List:", temps)
+
+for i in range(len(temps)):
+    temps[i] = (temps[i] - 32) * 5 / 9
+
+print("Celsius List:", temps)
+
+#7 :
+
+queue = []
+
+while True:
+    print("\n1. Enqueue")
+    print("2. Dequeue")
+    print("3. Display")
+    print("4. Exit")
+    
+    choice = int(input("Enter choice: "))
+    
+    if choice == 1:
+        item = input("Enter element: ")
+        queue.append(item)
+        print("Element added.")
+        
+    elif choice == 2:
+        if len(queue) == 0:
+            print("Queue is empty")
+        else:
+            print("Removed:", queue.pop(0))
+            
+    elif choice == 3:
+        print("Queue:", queue)
+        
+    elif choice == 4:
+        break
+        
+    else:
+        print("Invalid choice")
