@@ -1,0 +1,90 @@
+##Lecture 3
+
+#1 :
+
+s = input("Enter String")
+
+v1 = s.count('a')
+v2 = s.count('e')
+v3 = s.count('i')
+v4 = s.count('o')
+v5 = s.count('u')
+v6 = s.count('A')
+v7 = s.count('E')
+v8 = s.count('I')
+v9 = s.count('O')
+v10 = s.count('U')
+
+total = v1 + v2 + v3 + v4 + v5 + v6 + v7 + v8 + v9 + v10
+print("Vowels :", total)
+
+#2 :
+
+s = input("Enter String")
+
+# In introductory Python, we use .upper() and .lower()
+print("Upper case :", s.upper())
+print("Lower case :", s.lower())
+
+#3 :
+
+s = input("Enter String")
+L = len(s)
+
+i = 0
+print("Forward Order:")
+while i < L:
+    print(s[i])
+    i = i + 1
+
+i = L - 1
+print("Reverse Order:")
+while i >= 0:
+    print(s[i])
+    i = i - 1
+
+#4 :
+
+s = input("Enter String")
+length = len(s)
+
+print("First character :", s[0])
+print("Last character :", s[length - 1])
+
+if length % 2 != 0:
+    mid = length // 2
+    print("Middle character :", s[mid])
+
+#5 :
+
+s = "PDEU College"
+
+print("Extract PDEU :", s[0:4])
+print("Extract College :", s[5:12])
+print("Extract U Col :", s[3:8])
+print("Reverse string :", s[::-1])
+
+#6 :
+
+s1 = input("Enter first string")
+s2 = input("Enter second string")
+n = int(input("Enter number of repetitions"))
+
+s3 = s1 + s2
+print("Result :", s3 * n)
+
+#7 :
+
+s = input("Enter String")
+
+L = len(s)
+
+v = s.count('a') + s.count('e') + s.count('i') + s.count('o') + s.count('u')
+V = s.count('A') + s.count('E') + s.count('I') + s.count('O') + s.count('U')
+total_v = v + V
+
+total_c = L - total_v
+
+print("Total length :", L)
+print("Count of vowels :", total_v)
+print("Count of consonants :", total_c)
