@@ -1,0 +1,82 @@
+#1
+data = ["Amit", ("Rahul", "Rohan"), "Priya", ("Arjun",), "Sneha"]
+
+boys = 0
+girls = 0
+
+for ele in data:
+    if isinstance(ele, tuple):
+        boys += len(ele)
+    else:
+        girls += 1
+
+print("Number of boys:", boys)
+print("Number of girls:", girls)
+
+
+#2
+students = [(1, "Amit", 18), (2, "Priya", 19), (3, "Rahul", 18)]
+
+roll = []
+name = []
+age = []
+
+for s in students:
+    roll.append(s[0])
+    name.append(s[1])
+    age.append(s[2])
+
+print("Roll No:", roll)
+print("Names:", name)
+print("Age:", age)
+
+
+#3
+from datetime import date
+
+d1 = (10, 3, 2023)
+d2 = (25, 3, 2023)
+
+date1 = date(d1[2], d1[1], d1[0])
+date2 = date(d2[2], d2[1], d2[0])
+
+diff = abs((date2 - date1).days)
+
+print("Days between dates:", diff)
+
+
+#4
+food = [("Burger", 120), ("Pizza", 250), ("Sandwich", 80)]
+
+sorted_food = sorted(food, key=lambda x: x[1], reverse=True)
+
+print("Sorted food items:", sorted_food)
+
+
+#5
+data = [(), ("Amit",), (), ("Priya",), ("Rahul",)]
+
+result = [t for t in data if t]
+
+print("After removing empty tuples:", result)
+
+
+#6
+t = (10, 20, 30)
+
+# Convert to list → modify → convert back
+lst = list(t)
+lst[1] = 99
+t = tuple(lst)
+
+print("Modified tuple:", t)
+
+
+#7
+t = (10, 20, 30, 40)
+
+lst = list(t)
+lst.pop(2)  # remove element at index 2
+t = tuple(lst)
+
+print("After deletion:", t)
