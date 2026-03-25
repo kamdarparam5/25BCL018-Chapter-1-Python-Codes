@@ -1,0 +1,50 @@
+#1
+d1 = {"a": 1}
+d2 = {"b": 2}
+d3 = {"c": 3}
+
+d4 = {**d1, **d2, **d3}
+
+print("Combined dictionary:", d4)
+
+
+#2
+d = {}
+
+if not d:
+    print("Dictionary is empty")
+else:
+    print("Dictionary is not empty")
+
+
+#3
+employees = {
+    "HR": [(101, 20000), (102, 25000)],
+    "IT": [(201, 40000), (202, 35000)]
+}
+
+for dept, data in employees.items():
+    salaries = [emp[1] for emp in data]
+    print(dept, "Min:", min(salaries), "Max:", max(salaries))
+
+
+#4
+string = input("Enter a string: ")
+freq = {}
+
+for ch in string:
+    freq[ch] = freq.get(ch, 0) + 1
+
+print("Character frequency:", freq)
+
+
+#5
+prices = {"apple": 50, "banana": 20, "milk": 30}
+quantity = {"apple": 2, "banana": 5, "milk": 1}
+
+total = 0
+
+for item in prices:
+    total += prices[item] * quantity.get(item, 0)
+
+print("Total bill:", total)
